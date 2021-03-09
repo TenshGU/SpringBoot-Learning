@@ -1,6 +1,7 @@
 package com.example.beans;
 
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -8,8 +9,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author: Tensh
  * @createDate: 2021/3/9
  */
-//不能用user前缀，不然会输出电脑用户名
-@ConfigurationProperties(prefix = "userconfig")
+//properties和yml文件中：不能用user前缀，不然会输出电脑用户名
+@ConfigurationProperties(prefix = "user01")
 public class User implements BeanNameAware {
     private String nameInIOC;
     private String name;
